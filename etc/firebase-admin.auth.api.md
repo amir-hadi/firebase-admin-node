@@ -664,6 +664,8 @@ export class UserRecord {
     readonly emailVerified: boolean;
     readonly metadata: UserMetadata;
     readonly multiFactor?: MultiFactorSettings;
+    // Warning: (ae-forgotten-export) The symbol "PasskeyInfo" needs to be exported by the entry point index.d.ts
+    readonly passkeyInfo?: PasskeyInfo[];
     readonly passwordHash?: string;
     readonly passwordSalt?: string;
     readonly phoneNumber?: string;
