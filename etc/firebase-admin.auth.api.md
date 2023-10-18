@@ -366,6 +366,16 @@ export interface PasskeyConfigRequest {
 }
 
 // @public
+export class PasskeyInfo {
+    // Warning: (ae-forgotten-export) The symbol "PasskeyInfoResponse" needs to be exported by the entry point index.d.ts
+    constructor(response: PasskeyInfoResponse);
+    readonly credentialId: string;
+    readonly displayName?: string;
+    readonly name?: string;
+    toJSON(): object;
+}
+
+// @public
 export interface PasswordPolicyConfig {
     constraints?: CustomStrengthOptionsConfig;
     enforcementState?: PasswordPolicyEnforcementState;
@@ -664,7 +674,6 @@ export class UserRecord {
     readonly emailVerified: boolean;
     readonly metadata: UserMetadata;
     readonly multiFactor?: MultiFactorSettings;
-    // Warning: (ae-forgotten-export) The symbol "PasskeyInfo" needs to be exported by the entry point index.d.ts
     readonly passkeyInfo?: PasskeyInfo[];
     readonly passwordHash?: string;
     readonly passwordSalt?: string;
