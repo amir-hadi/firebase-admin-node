@@ -399,12 +399,12 @@ export class PasskeyInfo {
    * @returns A JSON-serializable representation of this passkey info object.
    */
   public toJSON(): object {
-    const json: any = {
-      name: this.name,
-      credentialId: this.credentialId,
-      displayName: this.displayName,
-    }
-    return json;
+      return {
+        name: this.name,
+        credentialId: this.credentialId,
+        displayName: this.displayName,
+      };
+    }    
   }
 
 }
