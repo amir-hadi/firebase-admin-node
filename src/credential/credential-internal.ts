@@ -314,6 +314,7 @@ class RefreshToken {
     copyAttr(this, json, 'clientSecret', 'client_secret');
     copyAttr(this, json, 'refreshToken', 'refresh_token');
     copyAttr(this, json, 'type', 'type');
+    copyAttr(this, json, 'quotaProjectId', 'quota_project_id');
 
     let errorMessage;
     if (!util.isNonEmptyString(this.clientId)) {
